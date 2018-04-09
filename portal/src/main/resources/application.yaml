@@ -1,0 +1,35 @@
+logging:
+  level:
+    com.thousandsunny: debug
+  file: ../logs/smartRec.log
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    test-while-idle: true
+    validation-query: SELECT 1 FROM dual
+    validation-interval: 60000
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+#      ddl-auto:  update
+      ddl-auto:  none
+      naming-strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+  mvc:
+    date-format: yyyy-MM-dd
+  profiles:
+#    active: dev
+    active: prod
+  thymeleaf:
+    cache: false
+  output:
+    ansi:
+      enabled: always
+  cache:
+    cache-names: channel
+    guava:
+      spec: maximumSize=6000000000,expireAfterAccess=300s
+multipart:
+  max-file-size: 100Mb
+  max-request-size: 1024mb

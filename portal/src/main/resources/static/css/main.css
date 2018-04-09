@@ -1,0 +1,391 @@
+@charset "UTF-8";
+/*!
+   * @名称：base.css
+   * @功能：1、重设浏览器默认样式
+   *       2、设置通用原子类
+   */
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  background: #f5f5f5;
+  color: black; }
+
+body {
+  background-color: #f5f5f5;
+  height: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0; }
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body, button, input, select, textarea {
+  font: 14px "Microsoft YaHei"; }
+
+input, select, textarea {
+  font-size: 100%; }
+
+/* 去掉 table cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ie bug：th 不继承 text-align */
+th {
+  text-align: inherit; }
+
+/* 去除默认边框 */
+fieldset, img {
+  border: none; }
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block; }
+
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym {
+  border: none;
+  font-variant: normal; }
+
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through; }
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: 500; }
+
+/* 去掉列表前的标识，li 会继承 */
+ol, ul {
+  list-style: none; }
+
+li {
+  list-style-type: none; }
+
+li:hover {
+  cursor: pointer; }
+
+/* 对齐是排版最重要的因素，别让什么都居中 */
+caption, th {
+  text-align: left; }
+
+/* 来自yahoo，让标题都自定义，适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 500; }
+
+q:before, q:after {
+  content: ''; }
+
+/* 统一上标和下标 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* 让链接在 hover 状态下显示下划线 */
+/* 默认不显示下划线，保持页面简洁 */
+ins, a {
+  color: #000;
+  text-decoration: none; }
+
+a:hover {
+  color: blue; }
+
+/* 去除 ie6 & ie7 焦点点状线 */
+a:focus, *:focus {
+  outline: none; }
+
+/* 清除浮动 */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both;
+  overflow: hidden; }
+
+.clearfix {
+  zoom: 1;
+  /* for ie6 & ie7 */ }
+
+.clear {
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden; }
+
+/* 设置显示和隐藏，通常用来与 js 配合 */
+.hide {
+  display: none !important; }
+
+.block {
+  display: block; }
+
+.inline-block {
+  display: inline-block; }
+
+.inline {
+  display: inline;
+  display: inline; }
+
+/* 设置浮动，减少浮动带来的 bug */
+.fl, .fr {
+  display: inline; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.font-small {
+  font-size: 12px; }
+
+.font-normal {
+  font-size: 14px; }
+
+.text-align-left {
+  text-align: left; }
+
+.text-align-right {
+  text-align: right; }
+
+.text-align-center {
+  text-align: center; }
+
+.text-vertical-top {
+  vertical-align: top; }
+
+.center-block {
+  margin: 0 auto; }
+
+.bold {
+  font-weight: bold; }
+
+.full-width {
+  width: 100% !important; }
+
+/*multi_pages_pxl*/
+.weixin .logo {
+  background-color: #fff;
+  padding: 2.5rem 3.125rem; }
+  .weixin .logo img {
+    width: 3.9375rem;
+    height: 2.5625rem;
+    float: left;
+    margin-right: 1.0625rem; }
+  .weixin .logo h3 {
+    font-size: 1rem;
+    color: #2B3857;
+    line-height: 1rem;
+    display: inline-block;
+    margin-top: 0.75rem; }
+
+.weixin .input {
+  padding: 0 1.25rem; }
+  .weixin .input input {
+    height: 2.5rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.5px solid #D3D5D7;
+    margin-top: 1.125rem;
+    font-size: 16px;
+    padding-left: 1.5625rem; }
+  .weixin .input ::-webkit-input-placeholder {
+    opacity: 0.2;
+    font-size: 16px;
+    color: #2B3857;
+    line-height: 16px; }
+  .weixin .input input.tel {
+    background: url(../img/weixin-tel.png) no-repeat 0px 12px; }
+  .weixin .input input.yanzhengma {
+    background: url(../img/weixin-yanzhengma.png) no-repeat 0px 12px; }
+  .weixin .input input.password {
+    background: url(../img/weixin-password.png) no-repeat 0px 12px; }
+  .weixin .input .yanzhengma-wrapper {
+    position: relative; }
+    .weixin .input .yanzhengma-wrapper button {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      right: 0;
+      top: 25px;
+      color: #37C00C;
+      font-size: 0.875rem; }
+  .weixin .input button.next-step {
+    background: #1495EB;
+    border-radius: 4px;
+    border: none;
+    height: 2.75rem;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    margin-top: 1.875rem; }
+
+.banben {
+  font-size: 0.875rem;
+  background-color: #f5f5f5;
+  line-height: 1.125rem;
+  margin-left: 1.625rem; }
+  .banben .logo {
+    border-bottom: 0.5px solid #D3D5D7;
+    padding: 1.375rem 0; }
+    .banben .logo .logo-img {
+      float: left;
+      width: 2.875rem;
+      height: 2.875rem;
+      border-radius: 10px;
+      background-color: #fff;
+      text-align: center; }
+      .banben .logo .logo-img img {
+        margin-top: 0.6875rem;
+        width: 2.25rem;
+        height: 1.4375rem; }
+    .banben .logo h3 {
+      float: left;
+      font-size: 14px;
+      color: #2B3857;
+      line-height: 18px;
+      margin-left: 15px;
+      margin-top: 15px; }
+  .banben .banben-txt-one {
+    border-bottom: 0.5px solid #D3D5D7;
+    padding-bottom: 1.0625rem; }
+    .banben .banben-txt-one h3 {
+      margin-top: 1.0625rem;
+      color: #999; }
+  .banben .banben-txt-two {
+    padding: 1.0625rem 0;
+    padding-right: 1.625rem; }
+    .banben .banben-txt-two h3 {
+      margin-bottom: 1.875rem;
+      color: #999; }
+    .banben .banben-txt-two p {
+      font-size: 0.75rem;
+      color: #999999;
+      line-height: 1.125rem; }
+
+.erweima .erweima-center {
+  text-align: center;
+  padding-top: 5.4375rem; }
+  .erweima .erweima-center img {
+    width: 7.875rem;
+    height: 5.1875rem; }
+  .erweima .erweima-center h3 {
+    font-size: 1rem;
+    color: #2B3857;
+    line-height: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 4.5rem; }
+  .erweima .erweima-center button {
+    background: #1495EB;
+    border-radius: 4px;
+    border: none;
+    width: 9.0625rem;
+    height: 2.75rem;
+    font-size: 1rem;
+    color: #fff; }
+  .erweima .erweima-center h6 {
+    font-size: 0.625rem;
+    color: #999999;
+    line-height: 14px;
+    margin-top: 17.8125rem; }
+
+.mine-erweima .mine-erweima-center {
+  background: #FFFFFF;
+  border-radius: 5px;
+  width: 19.0625rem;
+  height: 25.25rem;
+  margin: 6.875rem 2.1875rem;
+  text-align: center; }
+  .mine-erweima .mine-erweima-center img.header {
+    width: 2.625rem;
+    height: 2.625rem;
+    border-radius: 50%;
+    margin-top: 2.8125rem; }
+  .mine-erweima .mine-erweima-center h3 {
+    font-size: 1rem;
+    color: #2B3857;
+    line-height: 1rem;
+    margin-top: 0.875rem;
+    margin-bottom: 0.3125rem; }
+  .mine-erweima .mine-erweima-center h4 {
+    font-size: 0.875rem;
+    color: #999999;
+    line-height: 0.875rem;
+    margin-bottom: 1.5625rem; }
+  .mine-erweima .mine-erweima-center img.mine-erweima {
+    width: 12.375rem;
+    height: 12.375rem; }
+
+.news-details {
+  padding-bottom: 90px; }
+  .news-details .title {
+    margin: 1.4375rem 0.9375rem 1.875rem 1.125rem; }
+    .news-details .title h2 {
+      font-size: 1rem;
+      color: #2B3857;
+      margin-bottom: 0.625rem; }
+    .news-details .title h4 {
+      font-size: 0.8125rem;
+      color: #1495EB;
+      line-height: 0.875rem; }
+      .news-details .title h4 span {
+        font-size: 0.625rem;
+        color: #AFAFAF;
+        line-height: 0.625rem; }
+  .news-details .content {
+    margin: 0 1.25rem; }
+    .news-details .content p {
+      font-size: 0.75rem;
+      color: #172434;
+      line-height: 1.1875rem;
+      margin-bottom: 1.25rem; }
+    .news-details .content p.text-indent {
+      text-indent: 1.5rem; }
+    .news-details .content p.nomargin {
+      margin-bottom: 0; }
+  .news-details img.details-img {
+    width: 100%;
+    height: 10.5625rem;
+    margin: 2rem 0; }
+
+.server {
+  margin-top: 1.25rem; }
+
+.product-price .product-price-txt {
+  position: absolute;
+  bottom: 0;
+  background: #1495EB;
+  width: 100%;
+  height: 3.125rem; }
+  .product-price .product-price-txt h3 {
+    float: right;
+    margin-right: 1rem;
+    font-size: 0.875rem;
+    color: #FFFFFF;
+    line-height: 3.125rem; }
+    .product-price .product-price-txt h3 span {
+      font-size: 1.25rem;
+      margin-left: 0.625rem; }
+.white-bg{
+  background: white !important;
+}
+/*gxg*/
+.server_benefit1{
+  margin-top:0px!important;
+}

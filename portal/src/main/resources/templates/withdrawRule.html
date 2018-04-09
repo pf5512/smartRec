@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>提现规则</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<base th:href="${'http://'+#httpServletRequest.getLocalAddr()+':'+#httpServletRequest.getLocalPort()+#httpServletRequest.getContextPath()+'/'}"/>
+	<link href="../static/css/main.css" th:href="@{css/main.css}" rel="stylesheet" />
+</head>
+
+<body class="white-bg">
+	<div class="server">
+		<div class="news-details">
+			<div class="content" th:utext="${content}"></div>
+		</div>
+	</div>
+
+	<script src="../static/js/jquery.min.js" th:src="@{js/jquery.min.js}"></script>
+	<script src="../static/js/resize.fontsize.js" th:src="@{js/resize.fontsize.js}"></script>
+
+</body>
+
+</html>

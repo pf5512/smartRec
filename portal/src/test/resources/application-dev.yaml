@@ -1,0 +1,53 @@
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://119.37.198.9:3306/smartRec?characterEncoding=utf8&useSSL=true
+    username: ekoo
+    password: ekoo1101
+#spring:
+#  jpa:
+#    show-sql: false
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1/smartRec?characterEncoding=utf8&useSSL=true
+#    username: root
+#    password: 123456
+wx_config:
+    app_id: wx0afea86268a2d20b
+    secret: fe1bb6c678e4dfc027521df81e7777e8
+    redirectUrl: http://m.myhuipin.com/
+#sms:
+#  config:
+#    agent-url: http://218.244.136.70:8888/sms.aspx
+#    sender-id: 3416
+#    sender-account: 云装助手
+#    sender-password: iUaJWLd534tp
+#    signature: 【银雀科技】
+#    open: false
+a_li_sms_sender:
+    accessKeyID: "LTAIuVaCEVgx6hiV"
+    accessKeySecret: "mEJHdoKLq92v091e4OOPIu7i0JHn0h"
+    signName: "慧聘"
+    open: true
+easemob:
+    protocal: https
+    host: a1.easemob.com
+    org: 1152161118178178
+    app: huipin
+    client-id: YXA6g_LVoLxkEea_HMcpYdHLWA
+    client-secret: YXA6J52gG77BGu85t6xvRKlW5xqeJAs
+    imp-lib: httpclient
+    default-owner: d4f5056b744d4553882a90bd93179ac2
+    saltpass: meiyePass
+    appkey: meiye
+jpush:
+    apns-production: true
+    key: 5c13c997447a0d8058461fc1
+    secret: a8f591d00597ce26f414db12
+pingpp:
+    api-key: sk_live_0qbnjHPijjjPDe9y94zXX1uP
+    app-id: app_fjPC8Su5SaL0nLij
+    body: "慧聘"
+sc:
+    access-key: ZuD8uQMh9_8qoX3ptf60eSB-ykT3JY0MoPc6l4SR
+    secret-key: 3YaBslMBXvlUboU4WGnWSZrWmX1eu0xCABW3iGy2
